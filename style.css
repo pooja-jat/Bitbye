@@ -7,22 +7,27 @@
   font-family: Helvetica, sans-serif;
 }
 
+.main-wrapper {
+  background: radial-gradient(circle at 24% 35%, #b3e2ff, #eaf7ff, #f0f9ff 50%);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .main {
-  background: radial-gradient(
-    circle at 24% 35%,
-    #b3e2ff,
-    #eaf7ff,
-    #f0f9ff 50%
-  ); /* Gradient focused on left-center */
   font-family: "Inter Tight", serif;
   font-optical-sizing: auto;
-  padding: 0px 80px;
   width: 100%;
-  height: 100vh;
+  max-width: 1400px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .navbar {
-  padding: 20px 0px;
+  padding-top: 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -54,7 +59,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 60px 0;
+  padding: 0;
 }
 
 .left {
@@ -69,7 +74,7 @@
 .right {
   width: 50%;
   display: flex;
-  /* align-items: center; */
+  align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 20px;
@@ -78,7 +83,7 @@
 .right1 {
   display: flex;
   gap: 10px;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 500;
 }
 
@@ -95,7 +100,7 @@
 
 .content {
   width: 100%;
-  padding: 40px 120px;
+  padding: 60px 40px;
   background-color: #ffffff;
   border-radius: 20px;
   display: flex;
@@ -105,7 +110,7 @@
 }
 
 .content1 {
-  min-width: 320px;
+  min-width: 250px;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
@@ -166,10 +171,9 @@ hr {
 }
 
 .container2 {
-  padding: 40px 0px;
+  margin-bottom: 40px;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-
   color: rgb(89, 85, 85);
   font-size: 16px;
 }
@@ -184,8 +188,17 @@ h5 {
 }
 
 @media (max-width: 768px) {
+  .main-wrapper {
+    /* height: auto; */
+  }
+
   .main {
-    padding: 0 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px;
+    gap: 20px;
+    height: auto;
   }
   .navbar {
     padding: 20px 0px;
@@ -208,7 +221,7 @@ h5 {
   }
   .main-container {
     width: 100%;
-    height: 100vh;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -230,8 +243,12 @@ h5 {
     width: 100%;
   }
 
+  .right1 {
+    font-size: 20px;
+  }
+
   .container1 {
-    padding: 40px 0;
+    padding: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
