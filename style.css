@@ -20,6 +20,7 @@
   font-optical-sizing: auto;
   width: 100%;
   max-width: 1400px;
+  padding: 0 80px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
